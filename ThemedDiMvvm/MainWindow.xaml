@@ -1,0 +1,31 @@
+﻿<ui:FluentWindow
+x:Class="TrailerDesktop.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:TrailerDesktop"  
+    Title="{Binding ApplicationTitle,Mode=OneWay}"
+    ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+    ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    d:DesignHeight="300"
+    d:DesignWidth="500"
+    ExtendsContentIntoTitleBar="True"
+    mc:Ignorable="d"
+    WindowBackdropType="Mica"
+    WindowCornerPreference="Round"
+    WindowStartupLocation="CenterScreen"
+    d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel, IsDesignTimeCreatable=True}">
+    <DockPanel>
+        <ui:TitleBar DockPanel.Dock="Top" x:Name="TitleBar" Title="{Binding ApplicationTitle}" Height="30">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/wpfui-icon-256.png" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
+        <StackPanel  HorizontalAlignment="Center" Orientation="Horizontal"   VerticalAlignment="Center" Width="Auto">
+            <ui:TextBlock Padding="10" VerticalAlignment="Center"   Text="{Binding Counter}" />
+            <ui:Button Content="Increase" Command="{Binding CounterIncrementCommand}" />
+        </StackPanel>
+    </DockPanel>
+</ui:FluentWindow>
