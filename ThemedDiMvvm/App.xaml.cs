@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace TrailerDesktop;
+namespace ThemedDiMvvm;
 
 public partial class App
 {
@@ -11,7 +11,7 @@ public partial class App
             (context, services) =>
             {
                 services.AddSingleton<MainWindow>();
-                services.AddSingleton<MainWindowViewModel>();
+                services.AddSingleton<MainViewModel>();
             }
         )
         .Build();

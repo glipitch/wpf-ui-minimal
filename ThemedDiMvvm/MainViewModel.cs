@@ -1,9 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
-namespace TrailerDesktop;
+namespace ThemedDiMvvm;
 
-public partial class MainWindowViewModel : ObservableObject
+public partial class MainViewModel : ObservableObject
 {
     [ObservableProperty]
     private string applicationTitle = "ThemedDiMvvm";

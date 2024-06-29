@@ -1,10 +1,8 @@
-﻿using System.Windows;
-
-namespace TrailerDesktop;
+﻿namespace ThemedDiMvvm;
 
 public partial class MainWindow
 {
-    public MainWindow(MainWindowViewModel viewModel)
+    public MainWindow(MainViewModel viewModel)
     {
         DataContext = viewModel;
         InitializeComponent();

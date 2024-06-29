@@ -1,11 +1,11 @@
 ﻿<ui:FluentWindow
-x:Class="TrailerDesktop.MainWindow"
+x:Class="ThemedDiMvvm.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:TrailerDesktop"  
+    xmlns:local="clr-namespace:ThemedDiMvvm"
     Title="{Binding ApplicationTitle,Mode=OneWay}"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
     ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
@@ -16,7 +16,7 @@ x:Class="TrailerDesktop.MainWindow"
     WindowBackdropType="Mica"
     WindowCornerPreference="Round"
     WindowStartupLocation="CenterScreen"
-    d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel, IsDesignTimeCreatable=True}">
+    d:DataContext="{d:DesignInstance Type=local:MainViewModel, IsDesignTimeCreatable=True}">
     <DockPanel>
         <ui:TitleBar DockPanel.Dock="Top" x:Name="TitleBar" Title="{Binding ApplicationTitle}" Height="30">
             <ui:TitleBar.Icon>
