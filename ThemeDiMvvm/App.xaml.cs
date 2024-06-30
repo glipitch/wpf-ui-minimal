@@ -16,15 +16,9 @@ public partial class App
         )
         .Build();
 
-    private void OnStartup(object sender, StartupEventArgs e)
+    private void Application_Startup(object sender, StartupEventArgs e)
     {
         _host.Start();
         _host.Services.GetRequiredService<MainWindow>().Show();
-    }
-
-    private async void OnExit(object sender, ExitEventArgs e)
-    {
-        await _host.StopAsync();
-        _host.Dispose();
     }
 }
